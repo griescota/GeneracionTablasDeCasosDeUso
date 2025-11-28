@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TFG Gestión Integral - Proyectos</title>
+  <link rel="stylesheet" href="estilos/estilos.css">
+  <link rel="stylesheet" href="estilos/proyectos_estilos.css">
+</head>
+<body>
+  <header>
+    <h1>TFG Gestión Integral</h1>
+    <nav>
+      <ul>
+        <li><a href="dashboard.html">Inicio</a></li>
+        <li><a href="proyectos.html" class="active">Proyectos</a></li>
+        <li><a href="#" id="logoutLink">Cerrar Sesión</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    <div class="filters">
+      <button class="filter-btn active" data-filter="ACTIVO">Activos</button>
+      <button class="filter-btn"        data-filter="COMPLETADO">Completados</button>
+      <button class="filter-btn"        data-filter="CANCELADO">Cancelados</button>
+      <button class="filter-btn"        data-filter="ALL">Todos</button>
+    </div>
+
+    <div id="projects-list" class="card-container"></div>
+
+    <button id="btn-new-project" class="btn-new">+ Nuevo Proyecto</button>
+  </main>
+
+
+  <div id="modal-new" class="modal">
+    <div class="modal-dialog">
+      <button id="modal-close" class="modal-close">&times;</button>
+      <h2>Crear Nuevo Proyecto</h2>
+      <form id="form-new-project">
+        <label>Nombre:</label>
+        <input type="text" name="project-name" required>
+        <label>Descripción:</label>
+        <textarea name="project-description"></textarea>
+        <label>Estado:</label>
+        <select name="project-status">
+          <option value="ACTIVO">ACTIVO</option>
+          <option value="COMPLETADO">COMPLETADO</option>
+          <option value="CANCELADO">CANCELADO</option>
+        </select>
+        <button type="submit" class="btn-submit">Crear Proyecto</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="java/proyectos.js"></script>
+</body>
+</html>
+
+
+
+

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Inicio - TFG Gestión Integral</title>
+  <link rel="stylesheet" href="estilos/dashboard.css">
+</head>
+<body>
+  <header>
+    <h1>TFG Gestión Integral</h1>
+    <nav>
+      <ul>
+        <li><a href="dashboard.html" class="active">Inicio</a></li>
+        <li><a href="proyectos.html" id="proyectosLink">Proyectos</a></li>
+        <li><a href="index.html" id="logoutLink">Cerrar Sesión</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="dashboard">
+      <h2>Bienvenido <span id="userName"></span></h2>
+
+      <article class="intro">
+        <p>
+          <strong>TFG Gestión Integral</strong> es una herramienta diseñada para
+          acompañarte en todo el ciclo de vida de tus proyectos:
+        </p>
+        <ul class="objetivos">
+          <li><strong>Registro y autenticación:</strong> crea tu cuenta, inicia sesión y gestiona tu acceso mediante tokens seguros.</li>
+          <li><strong>Proyectos:</strong> crea, edita y elimina proyectos, manteniendo su estado actualizado (Activo, Completado, Cancelado).</li>
+          <li><strong>Requisitos:</strong> define requisitos funcionales y no funcionales, controla su estado y versiones.</li>
+          <li><strong>Casos de uso:</strong> modela escenarios de interacción, actores y flujos, categorizando cada caso.</li>
+          <li><strong>Escenarios y actores:</strong> detalla condiciones normales y alternativas, y gestiona los actores involucrados.</li>
+          <li><strong>Exportación:</strong> genera tablas de casos de uso formateadas para revisión o exportación a PDF/word.doc.</li>
+        </ul>
+      </article>
+
+      <div class="card-container">
+        <div class="card" data-dest="proyectos.html">
+          <h3>Proyectos</h3>
+          <p>Gestiona tus proyectos y su estado.</p>
+        </div>
+        <div class="card" data-dest="requisitos.html">
+          <h3>Requisitos</h3>
+          <p>Controla requisitos y versiones.</p>
+        </div>
+        <div class="card" data-dest="casos_uso.html">
+          <h3>Casos de Uso</h3>
+          <p>Modela flujos de interacción.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="java/dashboard.js"></script>
+</body>
+</html>

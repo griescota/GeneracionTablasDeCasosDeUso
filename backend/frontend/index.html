@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TFG Gestión Integral</title>
+  <link rel="stylesheet" href="estilos/estilos.css">
+</head>
+<body>
+  <header>
+    <h1>TFG Gestión Integral</h1>
+    <nav>
+      <button id="menu-toggle">☰</button>
+      <ul id="menu">
+        <li><a href="#" id="loginBtn" class="active">Acceder</a></li>
+        <li><a href="#" id="registerBtn">Registrar</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section id="loginForm" class="form-container">
+      <h2>Acceder</h2>
+      <form id="form-login">
+        <label for="login-username">Usuario:</label>
+        <input type="text" id="login-username" name="username" required>
+        <label for="login-password">Contraseña:</label>
+        <input type="password" id="login-password" name="password" required>
+        <button type="submit">Iniciar Sesión</button>
+      </form>
+      <div id="login-message" class="message"></div>
+    </section>
+
+    <section id="registerForm" class="form-container hidden">
+      <h2>Registrar</h2>
+      <form id="form-register">
+        <label for="register-username">Usuario:</label>
+        <input type="text" id="register-username" name="username" required>
+        <label for="register-email">Email:</label>
+        <input type="email" id="register-email" name="email" required>
+        <label for="register-password">Contraseña:</label>
+        <input type="password" id="register-password" name="password" required>
+        <button type="submit">Registrar</button>
+      </form>
+      <div id="register-message" class="message"></div>
+    </section>
+  </main>
+
+  <script src="java/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Detalle de Proyecto</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="estilos/estilos.css"> 
+  <link rel="stylesheet" href="estilos/proyectos_estilos.css"> 
+  <link rel="stylesheet" href="estilos/proyectos_detalle.css"> 
+</head>
+<body>
+  <header>
+    <div class="header-content">
+      <h1 id="project-name">–</h1>
+      <div class="header-actions">
+        <span id="project-status" class="status-badge">–</span>
+        <button class="btn-export" id="exportPdf"><i class="fas fa-file-pdf"></i> Exportar PDF</button>
+        <button class="btn-export-word" id="exportWord"><i class="fas fa-file-word"></i> Exportar Word</button>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="dashboard.html">Inicio</a></li>
+          <li><a href="proyectos.html">Proyectos</a></li>
+          <li><a href="index.html" id="logoutLink">Cerrar Sesión</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <template id="section-template">
+      <section class="dynamic-section">
+        <div class="section-header">
+          <h2></h2>
+          <button class="add-btn"><i class="fas fa-plus"></i> Nuevo</button>
+        </div>
+        <div class="card-container">
+          </div>
+      </section>
+    </template>
+
+    <div id="container">
+      </div>
+  </main>
+
+  <div id="genericModal" class="modal">
+    <div class="modal-content">
+      <h2 id="modalTitle"></h2>
+      <form id="modalForm">
+        </form>
+      <div class="modal-actions">
+        <button type="button" id="modal-cancel">Cancelar</button>
+        <button type="submit" id="modal-save" form="modalForm">Guardar</button> </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.25/jspdf.plugin.autotable.min.js"></script>
+  <script src="java/proyecto_detalle.js"></script>
+</body>
+</html>
